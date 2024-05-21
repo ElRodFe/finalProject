@@ -1,0 +1,34 @@
+{
+    "countries": [
+        {
+            "name": "Uruguay",
+            "lat": -34.90328,
+            "long": -56.18816
+        },
+        {
+            "name": "Argentina",
+            "lat": -34.61315,
+            "long": -58.37723
+        },
+        {
+            "name": "Brasil",
+            "lat": -15.77972,
+            "long": -47.92972
+        },
+        {
+            "name": "Chile",
+            "lat": -33.45694,
+            "long": -70.64827
+        },
+        {
+            "name": "Paraguay",
+            "lat": -25.28646,
+            "long": -57.647
+        },
+        {
+            "name": "United States",
+            "lat": 38.89511,
+            "long": -77.03637
+        }
+    ]
+}
