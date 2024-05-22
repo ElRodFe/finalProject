@@ -1,22 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.root {
+:root {
     --primaryColor: #306096;
-    --secundaryColor: #2C9A5C;
-    --terciaryColor: #F3F3F3;
-    --primaryFont: "Freeman", sans-serif;
+    --secondaryColor: #2C9A5C;
+    --tertiaryColor: #F3F3F3;
+    --primaryFont: "Roboto", sans-serif;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
 }
 
 body {
-    font-family: var(--primaryFont);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: var(--primaryFont);
+    font-weight: bold;
     text-align: center;
+    background-color: var(--tertiaryColor);
+}
+
+h1 {
+    color: var(--primaryColor);
 }
 
 header,
@@ -33,5 +60,18 @@ main {
 
 select,
 button {
+    padding: .7rem;
     margin: 10px 0;
+}
+
+button {
+    font-size: 1.2rem;
+    background-color: var(--secondaryColor);
+    color: var(--tertiaryColor);
+    cursor: pointer;
+}
+
+button:hover {
+    animation: shake 0.2s;
+    background-color: var(--primaryColor);
 }
