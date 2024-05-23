@@ -19,6 +19,8 @@ export function populateOptions(data) {
         const optionElement = document.createElement("option");
         optionElement.value = option.name;
         optionElement.textContent = `${option.name}`;
+        optionElement.id = option.id;
+
         selectElement.appendChild(optionElement);
     });
 }
