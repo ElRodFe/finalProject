@@ -8,14 +8,21 @@ export async function getDataFromJsonFile(url) {
     if (response.ok) {
         const data = await response.json();
 
-        populateOptions(data.countries);
+        return data
     }
 }
 
-export function populateOptions(data) {
-    const selectElement = document.querySelector("#options");
+export async function getCountryData(url, countryIndex) {
+    const data = await getDataFromJsonFile(url);
+    const countryData = data.countries[parseInt(countryIndex)];
 
-    data.forEach(option => {
+    return countryData;
+}
+
+export async function populateOptions(url, selectElement) {
+    const data = await getDataFromJsonFile(url);
+
+    data.countries.forEach(option => {
         const optionElement = document.createElement("option");
         optionElement.value = option.name;
         optionElement.textContent = `${option.name}`;
