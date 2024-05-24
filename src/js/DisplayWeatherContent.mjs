@@ -10,7 +10,7 @@ function weatherTemplate(data, day, i) {
     return `<section>
     <p>${day}</p>
     <img src="https://openweathermap.org/img/w/${weather.icon}.png" alt="${weather.description}">
-    <p>${weather.main}</p>
+    <p>${weather.description}</p>
     <p>Temperature: ${main.temp}°F</p>
     <p>Windchill: ${main.feels_like}°F</p>
     <p>Humidity: ${main.humidity}%</p>
