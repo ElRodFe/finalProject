@@ -41,6 +41,36 @@
             "name": "Bolivia",
             "lat": -16.5,
             "long": -68.15
+        },
+        {
+            "id": 7,
+            "name": "Perú",
+            "lat": -12.04318,
+            "long": -77.02824
+        },
+        {
+            "id": 8,
+            "name": "Ecuador",
+            "lat": -0.22985,
+            "long": -78.52495
+        },
+        {
+            "id": 9,
+            "name": "Colombia",
+            "lat": 4.60971,
+            "long": -74.08175
+        },
+        {
+            "id": 10,
+            "name": "Venezuela",
+            "lat": 10.48801,
+            "long": -66.87919
+        },
+        {
+            "id": 11,
+            "name": "Mexico",
+            "lat": 19.42847,
+            "long": -99.12766
         }
     ]
 }
