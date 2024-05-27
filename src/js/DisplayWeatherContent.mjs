@@ -8,7 +8,7 @@ function weatherTemplate(data, day, i) {
     const weather = list.weather[0];
 
     return `<section>
-    <p>${day}</p>
+    <h3>${day}</h3>
     <img src="https://openweathermap.org/img/w/${weather.icon}.png" alt="${weather.description}">
     <p>${weather.description}</p>
     <p>Temperature: ${main.temp}°F</p>
@@ -27,13 +27,26 @@ export default async function GetWeatherData(url, countryIndex, mainElement) {
 }
 
 function displayWeather(weatherData, country, mainElement) {
+    const div = document.createElement("div");
+
+    const reloadButton = document.createElement("button");
+    reloadButton.innerText = "Check Another Country"
+
     mainElement.innerHTML = "";
+
     const h2 = document.createElement("h2");
     h2.textContent = `${country.name}, ${weatherData.city.name}`;
     mainElement.appendChild(h2);
 
-    mainElement.insertAdjacentHTML("afterEnd", weatherTemplate(weatherData, "Today", 0))
+    div.insertAdjacentHTML("afterBegin", weatherTemplate(weatherData, "Past-Tomorrow", 16))
+    div.insertAdjacentHTML("afterBegin", weatherTemplate(weatherData, "Tomorrow", 8))
+    div.insertAdjacentHTML("afterBegin", weatherTemplate(weatherData, "Today", 0))
 
+    mainElement.appendChild(div);
+    mainElement.appendChild(reloadButton);
 
-
+    reloadButton.addEventListener("click", e => {
+        e.preventDefault
+        location.reload();
+    })
 }

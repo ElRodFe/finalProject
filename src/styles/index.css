@@ -75,3 +75,13 @@ button:hover {
     animation: shake 0.2s;
     background-color: var(--primaryColor);
 }
+
+div {
+    display: flex;
+}
+
+section {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--secondaryColor);
+}
