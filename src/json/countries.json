@@ -35,6 +35,12 @@
             "name": "United States",
             "lat": 38.89511,
             "long": -77.03637
+        },
+        {
+            "id": 6,
+            "name": "Bolivia",
+            "lat": -16.5,
+            "long": -68.15
         }
     ]
 }
