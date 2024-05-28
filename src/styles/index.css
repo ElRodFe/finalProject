@@ -85,3 +85,44 @@ section {
     padding: 20px;
     border: 1px solid var(--secondaryColor);
 }
+
+@media (max-width: 600px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+
+    header,
+    main,
+    footer {
+        margin: 5px 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    div {
+        display: block;
+    }
+
+    select,
+    button {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    section {
+        margin: 5px;
+        padding: 10px;
+    }
+}
