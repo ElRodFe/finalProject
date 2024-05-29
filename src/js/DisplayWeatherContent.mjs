@@ -22,7 +22,6 @@ export default async function GetWeatherData(url, countryIndex, mainElement) {
     const openWeatherURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${country.lat}&lon=${country.long}&units=imperial&appid=${apiKey}`;
     const weatherData = await getDataFromJsonFile(openWeatherURL);
 
-    console.log(weatherData);
     displayWeather(weatherData, country, mainElement);
 }
 
